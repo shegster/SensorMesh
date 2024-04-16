@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" style="-fx-background-color: lightgrey; -fx-alignment: center;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projektarbeit.sensormesh.controller.CCSController">
+   <children>
+      <HBox>
+         <children>
+            <AnchorPane prefHeight="-Infinity" prefWidth="-Infinity">
+               <children>
+                  <VBox alignment="TOP_CENTER" layoutX="11.0" layoutY="28.0">
+                     <children>
+                        <Label fx:id="devName" alignment="CENTER" minWidth="-Infinity" prefHeight="-Infinity" prefWidth="196.0" style="-fx-background-color: white; -fx-border-color: #9EB231; -fx-border-width: 5 5 0 5;" text="Device-Name" textAlignment="CENTER" wrapText="false">
+                           <font>
+                              <Font size="18.0" fx:id="x1" />
+                           </font>
+                        </Label>
+                        <Label fx:id="devId" alignment="CENTER" minWidth="-Infinity" prefHeight="-Infinity" prefWidth="196.0" style="-fx-background-color: white; -fx-border-color: #9EB231; -fx-border-width: 0 5 5 5;" text="Device-ID" textAlignment="CENTER" wrapText="false">
+                           <font>
+                              <Font size="18.0" fx:id="x11" />
+                           </font>
+                        </Label>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Delay">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <TextArea fx:id="delayBox" prefHeight="-Infinity" prefWidth="-Infinity" style="-fx-border-color: #9EB231; -fx-border-width: 3;" text="223 ms">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </TextArea>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Konz. CO2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <TextArea fx:id="co2Box" prefHeight="-Infinity" prefWidth="-Infinity" style="-fx-border-color: #9EB231; -fx-border-width: 3;" text="1000 ppm">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </TextArea>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Konz. TVOC">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <TextArea fx:id="tvocBox" prefHeight="-Infinity" prefWidth="-Infinity" style="-fx-border-color: #9EB231; -fx-border-width: 3;" text="20,3 ppb">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </TextArea>
+                     </children>
+                     <padding>
+                        <Insets right="10.0" top="20.0" />
+                     </padding>
+                     <opaqueInsets>
+                        <Insets left="10.0" top="20.0" />
+                     </opaqueInsets>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" style="-fx-background-color: transparent;">
+               <children>
+                  <VBox alignment="CENTER" spacing="40.0">
+                     <children>
+                        <Label alignment="TOP_CENTER" style="-fx-background-color: white; -fx-border-color: #9EB231; -fx-border-width: 5px; -fx-font-weight: bold;" text="CCS 811" textAlignment="CENTER" VBox.vgrow="NEVER">
+                           <font>
+                              <Font size="18.0" fx:id="x12" />
+                           </font>
+                        </Label>
+                        <LineChart fx:id="co2Chart" prefHeight="-Infinity" prefWidth="-Infinity" style="-fx-background-color: white; -fx-border-color: #9EB231; -fx-border-width: 3;" stylesheets="@chart-style.css" title="Konzentration CO2" VBox.vgrow="ALWAYS">
+                           <xAxis>
+                              <NumberAxis fx:id="co2XAxis" side="BOTTOM" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis fx:id="co2YAxis" side="LEFT" />
+                           </yAxis>
+                        </LineChart>
+                        <LineChart fx:id="tvocChart" prefHeight="-Infinity" prefWidth="-Infinity" style="-fx-background-color: white; -fx-border-color: #9EB231; -fx-border-width: 3;" stylesheets="@chart-style.css" title="Konzentration TVOC" VBox.vgrow="ALWAYS">
+                           <xAxis>
+                              <NumberAxis fx:id="tVocXAxis" side="BOTTOM" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis fx:id="tVocYAxis" side="LEFT" />
+                           </yAxis>
+                        </LineChart>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </children>
+</VBox>

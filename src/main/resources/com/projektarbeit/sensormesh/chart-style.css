@@ -1,0 +1,8 @@
+.chart-line-symbol {
+    -fx-background-color: #ffc0cb;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1px;
+    -fx-padding: 1px; /* Hiermit stellen wir die Größe ein */
+    -fx-transition-duration: 0ms;
+
+}

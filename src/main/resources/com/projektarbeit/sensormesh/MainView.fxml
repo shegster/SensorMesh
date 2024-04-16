@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.ScrollPane?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" style="-fx-background-color: #F9F8EB;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projektarbeit.sensormesh.controller.mainViewController">
+    <left>
+        <VBox prefHeight="673.0" prefWidth="179.0" style="-fx-background-color: #F9F8EB; -fx-padding: 0 10 0 34;">
+            <Label prefHeight="51.0" prefWidth="181.0" style="-fx-padding: 15; -fx-font-weight: bold; -fx-font-size: 15; -fx-background-color: #CAAAAC;" text="verfügbare Nodes:" />
+            <ListView fx:id="nodeList" editable="true" prefHeight="444.0" prefWidth="179.0" style="-fx-background-color: #F3F1D7;" />
+        </VBox>
+   </left>
+    <top>
+       <AnchorPane prefHeight="117.0" prefWidth="Infinity" style="-fx-background-color: #F9F8EB;">
+           <HBox layoutX="34.0" layoutY="18.0" style="-fx-alignment: center; -fx-spacing: 50;">
+               <Label fx:id="meshName" prefHeight="82.0" prefWidth="635.0" style="-fx-font-weight: bold; -fx-font-size: 25; -fx-alignment: center; -fx-background-color: #CAAAAC;" text="Netzname" textAlignment="CENTER" />
+               <Label fx:id="time" prefHeight="82.0" prefWidth="635.0" style="-fx-font-weight: bold; -fx-font-size: 25; -fx-alignment: center; -fx-background-color: #CAAAAC;" text="Uhrzeit" textAlignment="CENTER" />
+           </HBox>
+       </AnchorPane>
+   </top>
+    <center>
+      <ScrollPane fitToWidth="true" prefWidth="-Infinity" prefHeight="-Infinity" style="-fx-background-color: transparent; -fx-border-width: 3px; " >
+          <content>
+              <GridPane id="sensorPane" fx:id="sensorGrid" alignment="CENTER"  BorderPane.alignment="CENTER" style="-fx-background-color: transparent;">
+                  <columnConstraints>
+                      <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" halignment="CENTER"/>
+                  </columnConstraints>
+                  <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" valignment="CENTER"/>
+                  </rowConstraints>
+              </GridPane>
+          </content>
+      </ScrollPane>
+   </center>
+    <bottom>
+        <Label maxHeight="-Infinity" maxWidth="-Infinity" style="-fx-background-color: transparent; -fx-padding:54px">
+        </Label>
+    </bottom>
+    <right>
+        <Label maxHeight="-Infinity" maxWidth="-Infinity" style="-fx-background-color: transparent; -fx-padding:41px">
+        </Label>
+    </right>
+</BorderPane>
